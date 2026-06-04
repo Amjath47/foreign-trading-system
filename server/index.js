@@ -18,7 +18,7 @@ app.get('/api/hello', (req, res) => {
 });
 
 // Handle all other routes with React
-app.get('*', (req, res) => {
+app.get('/{*splat}', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
